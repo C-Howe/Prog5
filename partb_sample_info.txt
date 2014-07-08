@@ -1,0 +1,70 @@
+Information about sample inputs for Part (b) of Program V:
+----------------------------------------------------------
+  There are two sample inputs for Part (b). They are in the
+subdirectories b_test1 and b_test2 respectively.
+
+  (a) In the b_test1 subdirectory, the individual files 
+      are cons.h, const.h, count.c, count.o and arch1. 
+      The file arch1 is the archive obtained by running 
+      the Unix command
+
+         p5b -c arch1  cons.h  const.h  count.c  count.o 
+
+  (b) In the b_test2 subdirectory, the individual files 
+      are file1.c, file11.c, j1.c, j1.o and arch2. 
+      The file arch2 is the archive obtained by running 
+      the Unix command
+
+         p5b -c arch2  file1.c  file11.c  j1.c  j1.o 
+
+-----------------------------------------------------------------
+IMPORTANT!!
+   Some of the files in the above directories (e.g. the two
+archive files arch1 and arch2) are BINARY files. They were
+created on itsunix. They may NOT be compatible with other 
+machines. 
+-----------------------------------------------------------------
+
+Here, we explain how to use the test case in b_test1.  Similar 
+comments apply to the test case in b_test2.
+
+  As mentioned above, the directory b_test1 contains the files
+cons.h, const.h, count.c, count.o and arch1. 
+
+  With these files, when you run the command
+
+      p5b  -c  new_arch  cons.h  const.h  count.c  count.o 
+
+the binary file new_arch produced by your program should be
+identical to the file arch1. (You should use the "diff" command
+to compare the two files.)
+
+   When you run the Unix command
+
+      p5b  -p  cons  arch1
+
+the output to stdout should be the following:
+
+             cons.h     52
+             const.h    89
+
+When you run the command
+
+      p5b  -p  cr  arch1
+
+the output to stdout should be a message of the following form:
+
+      No matching files found.
+
+  To check whether your program extracts the files correctly from the
+archive, you are advised to create a new directory (say, temp) containing
+only the executable version (p5b) of your program and the file arch1.
+In that directory, when you run the command
+
+      p5b  -x  arch1
+
+your program should create the files cons.h, const.h, count.c and count.o 
+in the directory. These newly created files should be identical to
+the respective files cons.h, const.h,  count.c and count.o 
+in the other directory.  (Again, you should use "diff" to make sure 
+that there are no differences between the corresponding files.)

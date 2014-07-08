@@ -1,0 +1,52 @@
+            A Sample Input for Part (a) of Program V
+            ========================================
+
+  The directory /home2/classes/csi402/public/prog5 contains
+five hidden files (other than "." and "..").  When the command
+
+        p5a  /home2/classes/csi402/public/prog5
+
+is executed, the expected output (which your program must write to
+stdout) is shown below: 
+
+        .cshrc      2523  Apr 20 2012
+        .login      1404  Apr 20 2012
+        .plan        425  Feb 20 1998
+        .viminfo    9549  Apr 18 2012
+        .dtprofile  5232  Feb  7 2001
+
+(Your program may print the above lines in any order.)
+
+When the command
+
+        p5a  /home2/classes/csi402/public/prog5   -s
+
+is executed, the expected output (which your program must write to
+stdout) is shown below. (Because of the "-s" flag, the output
+must be in non-decreasing order of file size.)
+
+        .plan        425  Feb 20 1998
+        .login      1404  Apr 20 2012
+        .cshrc      2523  Apr 20 2012
+        .dtprofile  5232  Feb  7 2001
+        .viminfo    9549  Apr 18 2012
+
+Notes:
+------
+
+  (1) As shown above, your program should produce ONLY the
+      information specified in the handout (i.e., the file name,
+      its logical size and the date of last modification in the
+      form "mmm dd yyyy"). Your program should NOT produce any
+      other extraneous information. 
+
+  (2) In the expected output shown above, the columns
+      are aligned. Your program need not align the columns.
+
+  (3) DON'T copy the hidden files in the above directory to your
+      directory. Instead, run the p5a command directly as indicated
+      above.
+
+  (4) Be sure to test your program thoroughly by creating hidden files
+      in some of your own directories.
+     
